@@ -1,0 +1,2 @@
+ssh -L 15432:localhost:5432 ubuntu@13.48.59.237
+Permissions file  rajeev-ec2-key.pem

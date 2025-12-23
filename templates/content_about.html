@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Rajeev's Profile{% endblock %}
+
+{% block content %}
+		<section class="one-pager">
+			<span class="corner-v"></span>
+            <span class="corner-v second"></span>
+			
+			<div class="one-pager-grid">
+			    <div class="one-pager-main">
+					   <header class="one-pager-header">
+					         <p class="role">Product Engineering & Technology Leader</p>
+					   </header>
+					
+					  <p class="intro">
+					    Experienced product engineering leader with a strong track record across cloud
+					    platforms, AI, people leadership, and global product delivery. Proven ability to
+					    build, scale, and optimize complex technology organizations across software,
+					    hardware, and manufacturing domains.
+					  </p>
+					
+					  <section class="block">
+					    <h2>Product Engineering & Development</h2>
+					    <p>
+					      Accomplished in continuing product engineering across the full product lifecycle,
+					      with extensive hands-on experience in software and hardware development. Strong
+					      background in firmware development, deployment, service, and long-term support.
+					    </p>
+					  </section>
+					
+					  <section class="block">
+					    <h2>Cloud & AI Platforms</h2>
+					    <p>
+					      Strong experience designing and operating cloud-based solutions on AWS and Google
+					      Cloud Platform (GCP), with a proven focus on cost optimization and operational
+					      efficiency. Practical experience leveraging Google Vertex AI and AWS Bedrock to
+					      deliver AI-driven solutions.
+					    </p>
+					  </section>
+					
+					  <section class="block">
+					    <h2>Leadership & Program Management</h2>
+					    <p>
+					      Excellent people management skills with a 30-year track record of building and
+					      leading large engineering organizations, having managed teams of over 300
+					      engineers. Deep familiarity with both Waterfall and Agile Scrum methodologies for
+					      program and project execution.
+					    </p>
+					  </section>
+					
+					  <section class="block">
+					    <h2>Customer & Global Operations</h2>
+					    <p>
+					      Broad experience in customer success management across multiple regions,
+					      including Japan, Singapore, China, and the United States. Proven ability to align
+					      engineering delivery with regional customer needs and expectations.
+					    </p>
+					  </section>
+					
+					  <section class="block">
+					    <h2>Manufacturing & Supply Chain</h2>
+					    <p>
+					      Wide-ranging experience in product manufacturing, including manufacturing
+					      transitions, outsourcing strategies, and managing outsourced manufacturing
+					      partners while maintaining quality, cost, and delivery objectives.
+					    </p>
+					  </section>
+			    </div>
+				 <!-- RIGHT: logos -->
+			    <aside class="one-pager-logos">
+			      <div class="metrics">
+				    <div class="metric">
+					  <span class="metric-value" data-value="300">0</span>
+					  <span class="metric-label">Engineers Led</span>
+					</div>
+					
+					<div class="metric">
+					  <span class="metric-value" data-value="12">0</span>
+					  <span class="metric-label">Years Leadership</span>
+					</div>
+					
+					<div class="metric">
+					  <span class="metric-value" data-value="4">0</span>
+					  <span class="metric-label">Global Regions</span>
+					</div>
+				  </div>
+				
+				  <h2 class="section-label">Worked With</h2>
+			      <div class="logo-grid">
+				     <img src="/static/images/hp.svg" alt="Hewlett Packard" title="Hewlett Packard">
+				     <img src="/static/images/dell.svg" alt="Dell" title="Dell">
+				     <img src="/static/images/sco.svg" alt="SCO" title="SCO">
+				     <img src="/static/images/sun.svg" alt="Sun Microsystems" title="Sun Microsystems">
+				     <img src="/static/images/epson.svg" alt="Epson" title="Epson">
+				     <img src="/static/images/unisys.svg" alt="Unisys" title="Unisys">
+				     <img src="/static/images/CN.jpg" alt="Criterion Networks" title="Criterion Networks">
+				     <img src="/static/images/cisco.svg" alt="cisco" title="cisco">
+				     <img src="/static/images/philips.svg" alt="Philips" title="Philips">
+			      </div>
+			    </aside>
+			 </div>
+		</section>
+
+{% endblock %}
+
+{% block page_scripts %}
+	<script src="{{ url_for('static', filename='js/metrics.js') }}"></script>
+{% endblock %}
+
+

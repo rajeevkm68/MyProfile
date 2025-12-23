@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}Rajeev's Profile{% endblock %}
+
+{% block content %}
+<section class="one-pager">
+  <span class="corner-v"></span>
+  <span class="corner-v second"></span>
+
+  <div class="one-pager-grid">
+    <div class="one-pager-main">
+
+      <header class="one-pager-header mb-4">
+        <p class="lead">
+          Thank you for visiting. I’d appreciate your feedback to help improve.
+        </p>
+      </header>
+
+     <form
+		  id="contactForm"
+		  class="needs-validation"
+		  action="{{ url_for('main.contact') }}"
+		  method="post"
+		  novalidate
+		>
+	    {{ form.csrf_token }}
+		
+		  <!-- Name -->
+		  <div class="row mb-3 align-items-center">
+		    <label for="name" class="col-sm-3 col-form-label">
+		      Name
+		    </label>
+		    <div class="col-sm-9">
+		      <input
+		        class="form-control"
+		        id="name"
+		        name="name"
+		        type="text"
+		        placeholder="Your name"
+		        autocomplete="name"
+		        required
+		      />
+		    </div>
+		  </div>
+		
+		  <!-- Email -->
+		  <div class="row mb-3 align-items-center">
+		    <label for="email" class="col-sm-3 col-form-label">
+		      Email address
+		    </label>
+		    <div class="col-sm-9">
+		      <input
+		        class="form-control"
+		        id="email"
+		        name="email"
+		        type="email"
+		        placeholder="name@example.com"
+		        autocomplete="email"
+		        required
+		      />
+		    </div>
+		  </div>
+		
+		  <!-- Phone -->
+		  <div class="row mb-3 align-items-center">
+		    <label for="phone" class="col-sm-3 col-form-label">
+		      Phone <small class="text-muted">(optional)</small>
+		    </label>
+		    <div class="col-sm-9">
+		      <input
+		        class="form-control"
+		        id="phone"
+		        name="phone"
+		        type="tel"
+		        placeholder="+91 98765 43210"
+		        autocomplete="tel"
+		      />
+		    </div>
+		  </div>
+		
+		  <!-- Message -->
+		  <div class="row mb-4">
+		    <label for="message" class="col-sm-3 col-form-label">
+		      Message
+		    </label>
+		    <div class="col-sm-9">
+		      <textarea
+		        class="form-control"
+		        id="message"
+		        name="message"
+		        placeholder="Your message"
+		        rows="6"
+		        required
+		      ></textarea>
+		    </div>
+		  </div>
+		
+		  <!-- Submit -->
+		  <div class="row">
+		    <div class="col-sm-9 offset-sm-3">
+		      <button
+		        class="btn btn-danger text-uppercase px-4"
+		        id="submitButton"
+		        type="submit"
+		      >
+		        Send Message
+		      </button>
+		    </div>
+		  </div>
+	 </form>
+
+    </div>
+	<aside class="one-pager-logos"></aside>
+  </div>
+</section>
+{% endblock %}

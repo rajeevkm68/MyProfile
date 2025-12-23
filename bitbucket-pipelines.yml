@@ -1,0 +1,19 @@
+image: atlassian/default-image:3
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy to EC2
+          deployment: production
+          script:
+            - pipe: atlassian/ssh-run:0.6.1
+              variables:
+                SSH_USER: ubuntu
+                SERVER: 13.48.59.237
+                COMMAND: |
+                  cd /home/ubuntu/myprofile
+                  git pull origin master
+                  source venv/bin/activate
+                  pip install -r requirements.txt
+                  sudo systemctl restart myprofile
